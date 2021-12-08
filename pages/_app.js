@@ -1,7 +1,7 @@
  import 'styles/index.scss';
  import ThemeProvider from 'providers/Theamprovider';
 import  'bootstrap/dist/css/bootstrap.min.css';
- import 'highlight.js/styles/dracula.css';
+ import 'highlight.js/styles/dark.css';
  import '@fortawesome/fontawesome-svg-core/styles.css'
  import { library,config } from '@fortawesome/fontawesome-svg-core';
 import { faBorderAll,faList,faSun,faMoon,faSortNumericDown,
