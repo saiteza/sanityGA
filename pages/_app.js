@@ -8,8 +8,8 @@ import { faBorderAll,faList,faSun,faMoon,faSortNumericDown,
     faSortNumericUp} from '@fortawesome/free-solid-svg-icons';
 import "react-toggle/style.css"
 config.autoAddCss=false;
- 
-library.add(
+   
+library.add(  
     faSun,
     faMoon,
     faList,
@@ -17,6 +17,8 @@ library.add(
     faSortNumericDown,
     faSortNumericUp,
     faSortNumericDown,faSortNumericUp);
+
+    
    
  
 export  default  ({Component,pageProps})=>
