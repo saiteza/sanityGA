@@ -11,8 +11,7 @@ import {getHello} from "actions";
 import {getBlogsData} from "actions";
 import { getBlogCards } from "actions/Pagination";
 import PreviewContent from "components/PreviewContent";
- import Document, { Html, Head, Main, NextScript } from 'next/document'
-
+ 
  
 
  export default function Home({ blogs:initialData, preview   }) {
