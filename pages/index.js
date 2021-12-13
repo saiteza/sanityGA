@@ -11,11 +11,12 @@ import {getHello} from "actions";
 import {getBlogsData} from "actions";
 import { getBlogCards } from "actions/Pagination";
 import PreviewContent from "components/PreviewContent";
+ import Document, { Html, Head, Main, NextScript } from 'next/document'
+
  
 
  export default function Home({ blogs:initialData, preview   }) {
-  
-
+ 
   const [filter, setfilter] = useState({
     view: {
       list: 1,
@@ -34,6 +35,26 @@ import PreviewContent from "components/PreviewContent";
     <div>
        
       <PageLayout>
+        <head>
+        <script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-S2WDE5Y5ZG',{'debug_mode':true});
+        `}
+      </script>
+       
+         <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TNNKT58');gtag('config', 'G-S2WDE5Y5ZG');`}}></script>
+        <script>
+     
+        </script>
+          </head>
       {preview&&<PreviewContent />}
 
         {blogs?.filter((author,key)=>key==2).map((author) => (
