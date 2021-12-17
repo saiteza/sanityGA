@@ -3,7 +3,18 @@ import Link from 'next/link'
 import { urlFor } from 'libs/api';
 import moment from 'moment';
 
-
+function data(){
+  console.log("dataLayer Pushed :) ");
+  window.dataLayer.push({ 
+    'event':'ReadMore | Click', 
+    'page': {
+           
+           'name': 'sanity page',
+           'url': window.location.href
+         }
+   });
+      
+};
 
   const CardItem = (props ) => {
   const {age,name,coverimage,dob,slug,link,mode='normal' }=props;
@@ -38,7 +49,7 @@ import moment from 'moment';
         </Card.Body>
       </div>
       {link &&<Link href={link.href} as={link.as}>
-      <a  className="card-button">
+      <a  className="card-button" onClick={data}>
         Read More
       </a>
       </Link>

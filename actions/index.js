@@ -9,7 +9,7 @@ export   function getHello(){
 }
  
 export const getBlogsData = ({offset,filter}, initialData) => {
-    console.log(filter.date.asc)
+    
     return useSWR(`
     /api/blogs?offset=${offset || 0}&date=${filter.date.asc ? 'asc' : 'desc'}`,
      fetcher,

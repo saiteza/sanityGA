@@ -2,7 +2,7 @@ import { Row, Col, Media, Image } from 'react-bootstrap';
 
 const AuthorIntro = (props) =>{
         const {info,aname}=props;
-        console.log("data",info)
+        
         return(<Row>
           <Col md="8">
             {/* AUTHOR INTRO STARTS */}

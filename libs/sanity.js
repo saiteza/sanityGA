@@ -1,8 +1,8 @@
 import sanityClient from "@sanity/client";
 
 const options = {
-  dataset: process.env.SANITY_DATASET_NAME,
-  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_DATASET_NAME="production",
+  projectId: process.env.SANITY_PROJECT_ID="g7sudcw1",
   token: process.env.SANITY_API_TOKEN,
 
   useCdn: process.env.NODE_ENV === "production",

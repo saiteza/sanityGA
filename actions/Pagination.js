@@ -11,7 +11,8 @@ export const getBlogCards = ({ initialData, filter}) => {
  window.__pagination__init=true;
   }, [])
 
-
+  
+   
 
   return useSWRPages(
     'index-page',
